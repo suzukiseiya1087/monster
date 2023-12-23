@@ -9,24 +9,37 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    [HideInInspector] public float Speed;
+   
+
     [HideInInspector] public bool rightFacing;//向いてる方向(true,右向き,false,左向き)
+
+    [HideInInspector] public float Speed;
+    public CameraController cameraController; // カメラ制御クラス   
 
     // Start is called before the first frame update
     void Start()
     {
         //コンポーネントを取得
         rigidbody2D = GetComponent<Rigidbody2D>();
+
         spriteRenderer = GetComponent<SpriteRenderer>();
+
         rightFacing = true;//最初は右向き
+
+        // カメラ初期位置
+        cameraController.SetPosition(transform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
         MoveUpdate();
-
+        // ジャンプ入力処理
+        JumpUpdate();
+        // カメラに自身の座標を渡す
+        cameraController.SetPosition(transform.position);
     }
+   
     private void MoveUpdate()
     {
         //仮の移動処理
@@ -53,6 +66,21 @@ public class PlayerController : MonoBehaviour
         {//入力なし
             //X方向の移動停止
             Speed = 0.0f;
+        }
+      
+    }
+    /// <summary>
+	/// Updateから呼び出されるジャンプ入力処理
+	/// </summary>
+	private void JumpUpdate()
+    {
+        // ジャンプ操作
+        if (Input.GetKeyDown(KeyCode.W))
+        {// ジャンプ開始
+         // ジャンプ力を計算
+            float jumpPower = 10.0f;
+            // ジャンプ力を適用
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpPower);
         }
     }
     private void FixedUpdate()
