@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 50481590}
   - component: {fileID: 50481593}
   - component: {fileID: 50481594}
+  - component: {fileID: 50481595}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -155,8 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf9103e201ee3344aded31d57a7280d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightFacing: 0
-  Speed: 0
   cameraController: {fileID: 945568631}
 --- !u!212 &50481591
 SpriteRenderer:
@@ -272,6 +271,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.12, y: 3.2}
   m_EdgeRadius: 0
+--- !u!114 &50481595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50481589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7498a11b194425047a7f1c6930017719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &945568627
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +394,7 @@ GameObject:
   - component: {fileID: 1149002285}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -515,6 +526,7 @@ GameObject:
   - component: {fileID: 1965494164}
   - component: {fileID: 1965494167}
   - component: {fileID: 1965494168}
+  - component: {fileID: 1965494169}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -535,8 +547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraController: {fileID: 945568631}
-  Speed: 0
-  rightFacing: 0
 --- !u!212 &1965494165
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -651,3 +661,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.12, y: 3.2}
   m_EdgeRadius: 0
+--- !u!114 &1965494169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965494163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8186febc0b5c1224ca9c89a2431edbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
