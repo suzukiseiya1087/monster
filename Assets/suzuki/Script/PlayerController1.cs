@@ -6,12 +6,12 @@ using UnityEngine;
 public class PlayerController1 : MonoBehaviour
 {
     private Rigidbody2D rigidbody2D;
-
-    //private SpriteRenderer spriteRenderer;
-
-    //[SerializeField] float speed, dashspeed;
-
-
+    
+    public float fMoveSpeed = 7.0f;     // 移動値
+    //---------------------------
+    //          追加
+         // 弾のゲームオブジェクト
+                                        //private SpriteRenderer spriteRenderer;
 
     public CameraController cameraController; // カメラ制御クラス   
 
@@ -20,10 +20,7 @@ public class PlayerController1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //currentspeed = Speed;
-   
-
-
+       
 
         // カメラ初期位置
         cameraController.SetPosition(transform.position);
@@ -33,7 +30,8 @@ public class PlayerController1 : MonoBehaviour
     void Update()
     {
         MoveUpdate();
-    
+      
+      
         // カメラに自身の座標を渡す
         cameraController.SetPosition(transform.position);
     }
@@ -52,7 +50,7 @@ public class PlayerController1 : MonoBehaviour
         transform.position = position;
     }
     /// <summary>
-	/// Updateから呼び出されるジャンプ入力処理
-	/// </summar
-
+    /// Updateから呼び出されるジャンプ入力処理
+    /// </summar
+  
 }
