@@ -7,7 +7,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rigidbody2D;
-
+    private int currentWeaponIndex = 0;
+    public GameObject[] weapons; // 武器の配列
     [SerializeField] private GameObject lazer; //レーザープレハブを格納
     [SerializeField] private Transform attackPoint;//アタックポイントを格納
 
@@ -24,7 +25,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         //currentspeed = Speed;
-
+        // 初期の武器を有効にする
+        SwitchWeapon(currentWeaponIndex);
         currentAttackTime = attackTime; //currentAttackTimeにattackTimeをセット。
 
 
@@ -36,7 +38,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         MoveUpdate();
-
+        // 武器の切り替え処理
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            SwitchWeapon((currentWeaponIndex + 1) % weapons.Length);
+        }
         //~省略~
         Attack();
         // カメラに自身の座標を渡す
@@ -82,5 +88,19 @@ public class PlayerController : MonoBehaviour
     private void OnBecameInvisible()
     {
         Destroy(this.gameObject);
+    }
+    void SwitchWeapon(int newIndex)
+    {
+        // すべての武器を非アクティブにする
+        foreach (GameObject weapon in weapons)
+        {
+            weapon.SetActive(false);
+        }
+
+        // 新しい武器をアクティブにする
+        weapons[newIndex].SetActive(true);
+
+        // 現在の武器インデックスを更新
+        currentWeaponIndex = newIndex;
     }
 }
