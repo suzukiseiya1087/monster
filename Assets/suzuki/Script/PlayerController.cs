@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rigidbody2D;
     private int currentWeaponIndex = 0;
-    public GameObject[] weapons; // 武器の配列
+    public GameObject[] CaptureGun; // 武器の配列
     [SerializeField] private GameObject lazer; //レーザープレハブを格納
     [SerializeField] private Transform attackPoint;//アタックポイントを格納
 
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         // 武器の切り替え処理
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            SwitchWeapon((currentWeaponIndex + 1) % weapons.Length);
+            SwitchWeapon((currentWeaponIndex + 1) % CaptureGun.Length);
         }
         //~省略~
         Attack();
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         {
             position.x -= Speed;
         }
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.D))
         {
             position.x += Speed;
         }
@@ -92,13 +92,13 @@ public class PlayerController : MonoBehaviour
     void SwitchWeapon(int newIndex)
     {
         // すべての武器を非アクティブにする
-        foreach (GameObject weapon in weapons)
+        foreach (GameObject weapon in CaptureGun)
         {
             weapon.SetActive(false);
         }
 
         // 新しい武器をアクティブにする
-        weapons[newIndex].SetActive(true);
+        CaptureGun[newIndex].SetActive(true);
 
         // 現在の武器インデックスを更新
         currentWeaponIndex = newIndex;
