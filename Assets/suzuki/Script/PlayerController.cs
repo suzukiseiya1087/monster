@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private int currentWeaponIndex = 0;
     public GameObject[] CaptureGun; // 武器の配列
     [SerializeField] private GameObject lazer; //レーザープレハブを格納
+    [SerializeField] private GameObject CaptureGun1;
     [SerializeField] private Transform attackPoint;//アタックポイントを格納
 
     [SerializeField] private float attackTime = 0.02f; //攻撃の間隔
@@ -78,11 +79,21 @@ public class PlayerController : MonoBehaviour
         {
             if (canAttack)
             {
+               if(currentWeaponIndex ==1)
+                {
+                    // 捕獲銃を発射
+                    FireCaptureGun();
+                }
+            }
+            else
+            {
                 //第一引数に生成するオブジェクト、第二引数にVector3型の座標、第三引数に回転の情報
                 Instantiate(lazer, attackPoint.position, Quaternion.identity);
                 canAttack = false;　//攻撃フラグをfalseにする
                 attackTime = 0f;　//attackTimeを0に戻す
             }
+            canAttack = false;　//攻撃フラグをfalseにする
+            attackTime = 0f;　//attackTimeを0に戻す
         }
     }
     private void OnBecameInvisible()
@@ -102,5 +113,12 @@ public class PlayerController : MonoBehaviour
 
         // 現在の武器インデックスを更新
         currentWeaponIndex = newIndex;
+    }
+    void FireCaptureGun()
+    {
+        //第一引数に生成するオブジェクト、第二引数にVector3型の座標、第三引数に回転の情報
+        Instantiate(CaptureGun1, attackPoint.position, Quaternion.identity);
+        canAttack = false; //攻撃フラグをfalseにする
+        attackTime = 0f;　//attackTimeを0に戻す
     }
 }

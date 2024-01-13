@@ -4,31 +4,24 @@ using UnityEngine;
 
 public class CaptureGun : MonoBehaviour
 {
-    public float captureRange = 5f;
-    public LayerMask captureLayer;
+    [SerializeField] private float speed = 5; //銃弾のスピード
 
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.O))
-        {
-            Capture();
-        }
+        Move();
+
     }
 
-    void Capture()
+    public void Move()
     {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(mousePosition, captureRange, captureLayer);
-
-        foreach (Collider2D collider in colliders)
-        {
-            // キャプチャー成功時の処理
-            GameObject capturedObject = collider.gameObject;
-            Debug.Log("Captured: " + capturedObject.name);
-
-            // ここにキャプチャー後の処理を追加
-            Destroy(capturedObject); // 例：敵を削除する
-        }
+        Vector3 lazerPos = transform.position; //Vector3型のplayerPosに現在の位置情報を格納
+        lazerPos.x += speed * Time.deltaTime; //x座標にspeedを加算
+        transform.position = lazerPos; //現在の位置情報に反映させる
     }
 }
-
