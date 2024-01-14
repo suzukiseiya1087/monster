@@ -7,8 +7,8 @@ public class PlayerJumpController1 : MonoBehaviour
     // Start is called before the first frame update
     private Rigidbody2D rbody2D;
 
-    private float jumpForce = 350f;
-
+    private float jumpForce = 550f;
+    private int maxJumpCount = 5;
     private int jumpCount = 0;
     void Start()
     {
@@ -18,7 +18,8 @@ public class PlayerJumpController1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow) && this.jumpCount < 2)
+        // Check if W key is pressed and player has not exceeded the jump count
+        if (Input.GetKeyDown(KeyCode.UpArrow) && this.jumpCount < maxJumpCount)
         {
             this.rbody2D.AddForce(transform.up * jumpForce);
             jumpCount++;

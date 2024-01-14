@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/tuji/LiftGimmick.cs.meta
 guid: 619fadc07dca25642ac1c125a6841114
 ========
 guid: 7b5415cb002547a4793f007c5fcf5cb9
 >>>>>>>> 7d8607160f8802f5acdd4410fc35fa5a211e4c9b:Assets/suzuki/Script/WeaponSwitcher.cs.meta
+=======
+<<<<<<<< HEAD:Assets/suzuki/Script1/ActorController.cs.meta
+guid: 0e4d4efdc58a3bb4ba3f0bbec53d153c
+========
+guid: 7b5415cb002547a4793f007c5fcf5cb9
+>>>>>>>> main:Assets/suzuki/Script/WeaponSwitcher.cs.meta
+>>>>>>> main
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

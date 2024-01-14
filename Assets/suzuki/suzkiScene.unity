@@ -164,7 +164,10 @@ MonoBehaviour:
   - {fileID: 988573120203052662}
   lazer: {fileID: 86694449}
   CaptureGun1: {fileID: 988573120203052662}
+<<<<<<< HEAD
 >>>>>>> 7d8607160f8802f5acdd4410fc35fa5a211e4c9b
+=======
+>>>>>>> main
   attackPoint: {fileID: 1830914950}
   attackTime: 0.2
   cameraController: {fileID: 945568631}
@@ -1026,8 +1029,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: f58ecf10f8645224b94bde35615ba999, type: 3}
 =======
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: a5ba88d430248a84093236149d98d7c6, type: 3}
+--- !u!1 &988573120203052662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1180486192581788252, guid: d144e691c22430745903847c54313e33, type: 3}
+  m_PrefabInstance: {fileID: 2151018525993767978}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2151018525993767978
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1830914950}
+    m_Modifications:
+    - target: {fileID: 1180486192581788252, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_Name
+      value: CaptureGun1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180486192581788252, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682943810537054716, guid: d144e691c22430745903847c54313e33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+>>>>>>> main
   m_SourcePrefab: {fileID: 100100000, guid: d144e691c22430745903847c54313e33, type: 3}
 --- !u!4 &8594767235438638550 stripped
 Transform:
@@ -1047,4 +1127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+<<<<<<< HEAD
 >>>>>>> 7d8607160f8802f5acdd4410fc35fa5a211e4c9b
+=======
+>>>>>>> main

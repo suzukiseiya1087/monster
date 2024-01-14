@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/suzuki/Script1/ActorController.cs.meta
 guid: 0e4d4efdc58a3bb4ba3f0bbec53d153c
+========
+guid: 7b5415cb002547a4793f007c5fcf5cb9
+>>>>>>>> main:Assets/suzuki/Script/WeaponSwitcher.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
