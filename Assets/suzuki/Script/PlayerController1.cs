@@ -13,17 +13,17 @@ public class PlayerController1 : MonoBehaviour
     [SerializeField] private float attackTime = 0.02f; //攻撃の間隔
     private float currentAttackTime; //攻撃の間隔を管理
     private bool canAttack; //攻撃可能状態かを指定するフラグ
-
+   
 
     public CameraController cameraController; // カメラ制御クラス   
 
-    private float Speed = 0.01f;
+    private float Speed = 0.02f;
     //float currentspeed;
     // Start is called before the first frame update
     void Start()
     {
         //currentspeed = Speed;
-
+        rigidbody2D = GetComponent<Rigidbody2D>(); // Rigidbody2Dコンポーネントを取得
         currentAttackTime = attackTime; //currentAttackTimeにattackTimeをセット。
 
 
@@ -35,7 +35,8 @@ public class PlayerController1 : MonoBehaviour
     void Update()
     {
         MoveUpdate();
-
+        // Check if W key is pressed and player has not exceeded the jump count
+     
         //~省略~
         Attack();
         // カメラに自身の座標を渡す

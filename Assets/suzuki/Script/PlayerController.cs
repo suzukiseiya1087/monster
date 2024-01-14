@@ -20,12 +20,13 @@ public class PlayerController : MonoBehaviour
 
     public CameraController cameraController; // カメラ制御クラス   
 
-    private float Speed = 0.01f;
+    private float Speed = 0.02f;
     //float currentspeed;
     // Start is called before the first frame update
     void Start()
     {
         //currentspeed = Speed;
+        rigidbody2D = GetComponent<Rigidbody2D>(); // Rigidbody2Dコンポーネントを取得
         // 初期の武器を有効にする
         SwitchWeapon(currentWeaponIndex);
         currentAttackTime = attackTime; //currentAttackTimeにattackTimeをセット。
