@@ -17,7 +17,7 @@ public class PlayerController1 : MonoBehaviour
 
     public CameraController cameraController; // カメラ制御クラス   
 
-    private float Speed = 0.02f;
+    private float Speed = 0.09f;
     //float currentspeed;
     // Start is called before the first frame update
     void Start()
@@ -56,6 +56,17 @@ public class PlayerController1 : MonoBehaviour
         }
         transform.position = position;
     }
+    //    float moveInput = 0f;
+    //    if (Input.GetKey(KeyCode.LeftArrow))
+    //    {
+    //        moveInput = -1f;
+    //    }
+    //    if (Input.GetKey(KeyCode.RightArrow))
+    //    {
+    //        moveInput = 1f;
+    //    }
+    //    rigidbody2D.velocity = new Vector2(moveInput * Speed, rigidbody2D.velocity.y);
+    //}
     /// <summary>
 	/// Updateから呼び出されるジャンプ入力処理
 	/// </summar

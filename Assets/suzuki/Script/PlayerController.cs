@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public CameraController cameraController; // ƒJƒƒ‰§ŒäƒNƒ‰ƒX   
 
-    private float Speed = 0.02f;
+    private float Speed = 0.09f;
     //float currentspeed;
     // Start is called before the first frame update
     void Start()
