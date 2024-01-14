@@ -5,13 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
-  - Enemy
-  - PlayerBullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Captureable
+  - 
   - Water
   - UI
   - 
