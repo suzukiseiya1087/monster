@@ -24,4 +24,11 @@ public class CaptureGun : MonoBehaviour
         lazerPos.x += speed * Time.deltaTime; //x座標にspeedを加算
         transform.position = lazerPos; //現在の位置情報に反映させる
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject); // 敵オブジェクトを削除
+        }
+    }
 }

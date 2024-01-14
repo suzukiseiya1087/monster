@@ -56,17 +56,7 @@ public class PlayerController1 : MonoBehaviour
         }
         transform.position = position;
     }
-    //    float moveInput = 0f;
-    //    if (Input.GetKey(KeyCode.LeftArrow))
-    //    {
-    //        moveInput = -1f;
-    //    }
-    //    if (Input.GetKey(KeyCode.RightArrow))
-    //    {
-    //        moveInput = 1f;
-    //    }
-    //    rigidbody2D.velocity = new Vector2(moveInput * Speed, rigidbody2D.velocity.y);
-    //}
+  
     /// <summary>
 	/// Update‚©‚çŒÄ‚Ño‚³‚ê‚éƒWƒƒƒ“ƒv“ü—Íˆ—
 	/// </summar
